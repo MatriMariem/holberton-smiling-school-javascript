@@ -9,7 +9,7 @@
     font-style: normal;
     font-display: block;
   }
-  
+
   [class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'holberton_school-icon' !important;
@@ -18,12 +18,12 @@
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-  
+
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   .holberton_school-icon-arrow_1:before {
     content: "\e900";
   }
@@ -87,7 +87,7 @@
   .holberton_school-icon-star:before {
     content: "\e914";
   }
-  
+
 :root {
     --max-width: 1150px;
     --purple-color: #C271FF;
@@ -264,6 +264,20 @@ main.courses-main .hero-section {
 }
 
 /* Quotes CAROUSEL SECTION */
+.loader {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #C271FF;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 .quotes-section {
     background-color: var(--purple-color);
@@ -272,7 +286,7 @@ main.courses-main .hero-section {
 
 .quotes-section img {
     width: 125px;
-    height: 125px;   
+    height: 125px;
 }
 
 .carousel-item-content {
@@ -541,4 +555,3 @@ tbody tr:first-child {
 .dropdown-menu button:hover {
   color: var(--purple-color);
 }
-
