@@ -3,10 +3,10 @@ $.ajax({
       url: 'https://smileschool-api.hbtn.info/quotes',
       type: "get",
       beforeSend: function() {
-    $("#loaderDiv").show();
+    $("#QuotesLoader").show();
   },
       success: function(response) {
-        $("#loaderDiv").hide();
+        $("#QuotesLoader").hide();
         for (let i = 0; i < response.length; i++) {
           let $html = $(`
           <div class="carousel-item carousel-item-content ${i === 0 ? 'active' : ''}">
@@ -26,4 +26,18 @@ $.ajax({
       },
     });
 
+
+    $.ajax({
+      url: 'https://smileschool-api.hbtn.info/popular-tutorials',
+      type: "get",
+      beforeSend: function() {
+        $("#VideosLoader").show();
+      },
+      success: function(response) {
+        $("#VideosLoader").hide();
+        for (let i = 0; i < response.length; i++) {
+
+          }
+        },
+      });
 });
