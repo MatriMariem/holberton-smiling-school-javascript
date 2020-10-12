@@ -121,4 +121,68 @@ $.ajax({
             }
           },
         });
+
+        $.ajax({
+              url: 'https://smileschool-api.hbtn.info/courses',
+              type: "get",
+              data: {
+                action: 'query',
+                list: 'search',
+                format: 'json',
+                // q: '',
+                // topic: 'all',
+                // sort: 'most_viewed',
+              },
+              beforeSend: function() {
+            $("#CoursesLoader").show();
+          },
+              success: function(response) {
+                $("#CoursesLoader").hide();
+                let $t = response.topics;
+                  $("#topic-menu-container").append(`<button class="btn btn-secondary border-0 rounded-0 search-element w-100 text-left" type="button" id="topic-menu-container" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ${$t[0].substr(0,1).toUpperCase()+ $t[0].substr(1)}
+                  </button>
+                  <div class="dropdown-menu" id="topic-menu" aria-labelledby="topic-menu-container"></div>`);
+                let $topics = '';
+                for (let i = 0; i < $t.length; i++) {
+                  $topics += `<button data-value="${$t[i]}" class="dropdown-item" type="button">${$t[i].substr(0,1).toUpperCase()+ $t[i].substr(1)}</button>`;
+                }
+                $("#topic-menu").append($topics);
+
+
+                let $s = response.sorts;
+                  $("#sort-menu-container").append(`<button class="btn btn-secondary border-0 rounded-0 search-element w-100 text-left" type="button" id="topic-menu-container" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    ${$s[0].substr(0,1).toUpperCase()+ $s[0].substr(1,3) + ' ' + $s[0].substr(5,1).toUpperCase() + $s[0].substr(6)}
+                  </button>
+                  <div class="dropdown-menu" id="sort-menu" aria-labelledby="sort-menu-container"></div>`);
+                let $sorts = '';
+                for (let i = 0; i < $s.length; i++) {
+                  $sorts += `<button data-value="${$s[i]}" class="dropdown-item" type="button">${$s[i].substr(0,1).toUpperCase()+ $s[i].substr(1,3) + ' ' + $s[i].substr(5,1).toUpperCase() + $s[i].substr(6)}</button>`;
+                }
+                $("#sort-menu").append($sorts);
+
+
+
+
+                // for (let i = 0; i < response.length; i++) {
+                //   let $html = $(`
+                //   <div class="carousel-item carousel-item-content ${i === 0 ? 'active' : ''}">
+                //       <div class="row">
+                //           <div class="col-sm-3 text-center">
+                //               <img class="rounded-circle" src=${response[i].pic_url} class="d-block w-100" alt="random person image">
+                //           </div>
+                //           <div class="col-sm-8 ml-3 d-flex flex-column">
+                //               <div>&lt;&lt; ${response[i].text} &gt;&gt;</div>
+                //               <div class="font-weight-bold mt-3">${response[i].name}</div>
+                //               <div>${response[i].title}</div>
+                //           </div>
+                //       </div>
+                //   </div>`);
+                //   $("#quotesCarouselInner").append($html);
+                // }
+              }
+            });
+
+
+
 });
