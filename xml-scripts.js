@@ -252,9 +252,6 @@ $.ajax({
                           $("#coursesvideos").append($html);
 
                     })
-
-
-
             }
           });
         }
