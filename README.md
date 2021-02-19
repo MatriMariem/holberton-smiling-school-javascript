@@ -53,7 +53,7 @@ Mariem Matri : [LinkedIn] | [GitHub] | [Twitter]
 [GitHub]: <https://github.com/MatriMariem>
 [Twitter]: <https://twitter.com/MatriMariem>
 
-## AUTHOR DESCRIPTION (Mariem Matri)
+## AUTHOR DESCRIPTION
  - I'm a Food Process Engineer and a software engineering student at Holberton School.
   - I have been studying low-level programming, high-level
  programming, system engineering and devops, and web
