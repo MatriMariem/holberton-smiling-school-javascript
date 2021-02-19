@@ -45,3 +45,19 @@
 ![Pricing Tablet UI design](/screenshots/pricing_tablet.png)
 #### Pricing mobile design
 ![Pricing Mobile UI design](/screenshots/pricing_mobile.png)
+
+## AUTHOR
+Mariem Matri : [LinkedIn] | [GitHub] | [Twitter]
+
+[LinkedIn]: <https://www.linkedin.com/in/mariem-matri-249620178>
+[GitHub]: <https://github.com/MatriMariem>
+[Twitter]: <https://twitter.com/MatriMariem>
+
+## AUTHOR DESCRIPTION (Mariem Matri)
+ - I'm a Food Process Engineer and a software engineering student at Holberton School.
+  - I have been studying low-level programming, high-level
+ programming, system engineering and devops, and web
+ stack programming (Front-end & Back-end) using a
+ methodology based on peer-learning and projects.
+  - I'm curious, adaptable, a fast learner and I love developing
+ my skills.
